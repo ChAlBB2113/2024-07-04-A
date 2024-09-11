@@ -30,7 +30,10 @@ class View(ft.UserControl):
 
         # First row with some controls
         self.ddyear = ft.Dropdown(label="Anno",
-                                  hint_text="Anno da analizzare per gli avvistamenti.")
+                                  hint_text="Anno da analizzare per gli avvistamenti.",
+                                  on_change=self._controller.fillDDforme)#senza parentesi per on change/on click
+
+        self._controller.fillDDanni()
 
         self.ddshape = ft.Dropdown(label="Shape",
                                    hint_text="Shape da analizzare per gli avvistamenti.")
